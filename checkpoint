@@ -1,0 +1,2 @@
+model_checkpoint_path: "lenet_finetune"
+all_model_checkpoint_paths: "lenet_finetune"
