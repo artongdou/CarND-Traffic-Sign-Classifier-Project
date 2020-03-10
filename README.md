@@ -176,7 +176,11 @@ If a well known architecture was chosen:
 * Why did you believe it would be relevant to the traffic sign application?
 * How does the final model's accuracy on the training, validation and test set provide evidence that the model is working well?
 
-A `Lenet-5` architecture is chosen by the recommendation of this course. But it struggles with achieving a higher accuracy while using different hyperparameters. It is suggested that training the model multiple times using different hyperparameters is an effective way to achieve a higher accuracy model, so I tried the 2 steps method described in step `3` and the result is better. 
+![LeNet Architecture](./writeup_imgs/lenet.png)
+
+Source: Yan LeCun
+
+A `Lenet-5 Max` architecture is chosen by the recommendation of this course as the baseline. But it struggles with achieving a higher accuracy while using different hyperparameters.  It is suggested that training the model multiple times using different hyperparameters is an effective way to achieve a higher accuracy model, so I tried the 2 steps method described in step `3` and the result is better. I also introduced dropout after the first fully connected layer to improve the robustness.
 
 An interesting observation is that during the fine tuning phase, where dropout rate is increased from 10% to 50%, the training accuracy stays roughly the same but validation accuracy is increased gradually as it is trained more. It tells me that the dropout is effective to generalize the model to better classify unseen images.
  
