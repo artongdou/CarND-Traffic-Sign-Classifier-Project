@@ -27,6 +27,8 @@ The goals / steps of this project are the following:
 [image6]: ./writeup_imgs/2_hist_original_train_set.jpg "2_hist_original_train_set"
 [image7]: ./writeup_imgs/2_hist_augment_train_set.jpg "2_hist_augment_train_set"
 [image8]: ./writeup_imgs/2_normalized_train_set.jpg "2_normalized_train_set"
+[image9]: ./writeup_imgs/3_internet_imgs_prediction.jpg "3_internet_imgs_prediction"
+[image10]: ./writeup_imgs/3_top5_prediction.jpg "3_top5_prediction"
 
 <!-- [image4]: ./examples/placeholder.png "Traffic Sign 1"
 [image5]: ./examples/placeholder.png "Traffic Sign 2"
@@ -183,44 +185,19 @@ An interesting observation is that during the fine tuning phase, where dropout r
 
 #### 1. Choose five German traffic signs found on the web and provide them in the report. For each image, discuss what quality or qualities might be difficult to classify.
 
-Here are five German traffic signs that I found on the web:
-
-![alt text][image4] ![alt text][image5] ![alt text][image6] 
-![alt text][image7] ![alt text][image8]
-
-The first image might be difficult to classify because ...
 
 #### 2. Discuss the model's predictions on these new traffic signs and compare the results to predicting on the test set. At a minimum, discuss what the predictions were, the accuracy on these new predictions, and compare the accuracy to the accuracy on the test set (OPTIONAL: Discuss the results in more detail as described in the "Stand Out Suggestions" part of the rubric).
 
-Here are the results of the prediction:
+To answer both questions 1 and 2, here is graph that contains the original image found on the web, prediction label and the actual label.
+And it achieves `82.9%` accuracy out of `35` images, so it mis-classifies `5` of the images. The mis-classified images are `20km/h speed limit` and `children crossing`. They both have very similar signs like a speed limit sign with different speed limit, and right-of-way in the next intersection. It probably needs more node in the network to capture those details.
 
-| Image			        |     Prediction	        					| 
-|:---------------------:|:---------------------------------------------:| 
-| Stop Sign      		| Stop sign   									| 
-| U-turn     			| U-turn 										|
-| Yield					| Yield											|
-| 100 km/h	      		| Bumpy Road					 				|
-| Slippery Road			| Slippery Road      							|
-
-
-The model was able to correctly guess 4 of the 5 traffic signs, which gives an accuracy of 80%. This compares favorably to the accuracy on the test set of ...
+![alt text][image9]
 
 #### 3. Describe how certain the model is when predicting on each of the five new images by looking at the softmax probabilities for each prediction. Provide the top 5 softmax probabilities for each image along with the sign type of each probability. (OPTIONAL: as described in the "Stand Out Suggestions" part of the rubric, visualizations can also be provided such as bar charts)
 
-The code for making predictions on my final model is located in the 11th cell of the Ipython notebook.
+A summary of the top5 predictions is shown below. 
 
-For the first image, the model is relatively sure that this is a stop sign (probability of 0.6), and the image does contain a stop sign. The top five soft max probabilities were
-
-| Probability         	|     Prediction	        					| 
-|:---------------------:|:---------------------------------------------:| 
-| .60         			| Stop sign   									| 
-| .20     				| U-turn 										|
-| .05					| Yield											|
-| .04	      			| Bumpy Road					 				|
-| .01				    | Slippery Road      							|
-
-
-For the second image ... 
+![alt text][image10]
 
 ### (Optional) Visualizing the Neural Network (See Step 4 of the Ipython notebook for more details)
 #### 1. Discuss the visual output of your trained network's feature maps. What characteristics did the neural network use to make classifications?
